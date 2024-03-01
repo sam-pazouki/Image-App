@@ -1,18 +1,16 @@
+/* Base styles*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main App container styles */
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
+/* Header styles*/
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -24,15 +22,36 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Input field styles */
+input {
+  margin: 10px;
+  padding: 10px;
+  font-size: calc(8px + 2vmin);
+  width: auto; 
+  max-width: 95%; 
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Button styles */
+button {
+  margin: 10px;
+  padding: 10px;
+  font-size: calc(8px + 2vmin);
+  cursor: pointer; 
+  background-color: #61dafb; 
+  border: none;
+  border-radius: 5px; 
+}
+
+/* Responsive for tablets */
+@media (max-width: 768px) {
+  .App-header {
+    font-size: calc(12px + 2vmin);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* Responsive for mobile devices */
+@media (max-width: 480px) {
+  .App-header {
+    font-size: calc(14px + 2vmin);
   }
 }

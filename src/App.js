@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import AddAlbumForm from './components/AddAlbumForm';
+import HomePage from './components/HomePage'; 
 import './App.css';
 
-function App() {
+// The main App component where the state and functions related to albums are managed.
+const App = () => {
+  // State to hold the list of albums
+  const [albums, setAlbums] = useState([]);
+
+  // Function to add a new album to the albums state
+  const addAlbum = (albumName) => {
+    setAlbums([...albums, { name: albumName, images: [] }]);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    // Router setup to handle navigation within the app
+    <Router>
+      <div className="App">
+        <header className="App-header">
+          <h1>Image Album Manager</h1>
+          <AddAlbumForm onAddAlbum={addAlbum} />
+        </header>
+        <Routes>
+          <Route exact path="/" component={HomePage}/>
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
