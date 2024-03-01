@@ -1,4 +1,7 @@
-# Getting Started with Create React App
+[Screenshot 2024-03-01 105837](https://github.com/sam-pazouki/Lyncas-Desafio/assets/68926038/78eab1cf-20e5-420b-bbc9-bc1c006a4f59)
+
+# Getting Start!
+ed with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
