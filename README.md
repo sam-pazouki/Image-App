@@ -48,8 +48,11 @@ Esta aplicação é implantada no AWS S3, garantindo alta disponibilidade e dese
 
 ## Contribuindo
 1.Crie sua ramificação de recursos (git checkout -b feature/AmazingFeature)
+
 2.Confirme suas alterações (git commit -m 'Add some AmazingFeature')
+
 3.Push to the Branch (recurso de origem git push/AmazingFeature)
+
 4.Abra uma solicitação pull
 
 ## Licença
