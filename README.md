@@ -56,7 +56,7 @@ Esta aplicação é implantada no AWS S3, garantindo alta disponibilidade e dese
 4.Abra uma solicitação pull
 
 ## Licença
--Distribuído sob a licença MIT. Consulte LICENÇA para obter mais informações.
+-Distribuído sob a licença MIT
 
 ## Autores
 Sam Pazouki Varooneh- sam-pazouki
