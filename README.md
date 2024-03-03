@@ -1,73 +1,54 @@
 [Screenshot 2024-03-01 105837](https://github.com/sam-pazouki/Lyncas-Desafio/assets/68926038/78eab1cf-20e5-420b-bbc9-bc1c006a4f59)
 
-# Getting Start!
-ed with Create React App
+-Gerenciador de imagens
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Image Manager é um aplicativo baseado em React projetado para agilizar o processo de gerenciamento e compartilhamento de imagens. Utilizando a poderosa API Imgur para hospedagem de imagens, este projeto mostra a capacidade de fazer upload, recuperar e organizar imagens com eficiência. Desenvolvido com foco na experiência e no desempenho do usuário, o Image Manager aproveita tecnologias web modernas, como Axios para solicitações HTTP, npm para gerenciamento de dependências e extensas otimizações de CSS para garantir uma interface suave e responsiva. Implantado no AWS S3, o aplicativo demonstra escalabilidade e acessibilidade, atendendo a uma ampla gama de usuários.
 
-## Available Scripts
+# Começando!
+Para obter uma cópia local instalada e funcionando, siga estas etapas simples.
 
-In the project directory, you can run:
+Pré-requisitos
+Antes de começar, certifique-se de ter a versão mais recente do npm instalada. Você pode instalar o npm com o seguinte comando:
 
-### `npm start`
+npm install npm@latest -g
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#Clonar o repositório
+git clone do git https://github.com/seunomedeusuario/image-manager.git
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#npm
+Inicie o servidor de desenvolvimento
+npm start
 
-### `npm test`
+#Uso
+Use o Image Manager para enviar suas imagens para o Imgur, organizá-las em álbuns e compartilhá-las com facilidade. Navegue pela interface amigável do aplicativo para gerenciar suas coleções de imagens.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#Executando testes
+Execute testes automatizados para o aplicativo usando o seguinte comando:
+npm test
 
-### `npm run build`
+#Implantação
+Esta aplicação é implantada no AWS S3, garantindo alta disponibilidade e desempenho. Siga a documentação da AWS para implantar aplicativos React no S3 para obter mais detalhes.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#Construído com:
+1.React – A estrutura web usada
+2.Axios – Para fazer solicitações HTTP
+3.API Imgur - Usada para upload e gerenciamento de imagens
+4.CSS – Para estilo e otimização
+5.npm - Gerenciamento de Dependências
+6.AWS S3 – plataforma de implantação
+7.Postman - Usado para testes de API
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-Crie sua ramificação de recursos (git checkout -b feature/AmazingFeature)
+-Confirme suas alterações (git commit -m 'Add some AmazingFeature')
+-Push to the Branch (recurso de origem git push/AmazingFeature)
+-Abra uma solicitação pull
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#Licença
+-Distribuído sob a licença MIT. Consulte LICENÇA para obter mais informações.
 
-### `npm run eject`
+#Autores
+Sam Pazouki Varooneh- sam-pazouki
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Agradecimentos
+-API Imgur para fornecer uma extensa plataforma de hospedagem de imagens.
+-AWS S3 para serviços de implantação e hospedagem.
