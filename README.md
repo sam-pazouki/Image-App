@@ -53,4 +53,5 @@ Sam Pazouki Varooneh- sam-pazouki
 
 ## Agradecimentos
 -API Imgur para fornecer uma extensa plataforma de hospedagem de imagens.
+
 -AWS S3 para serviços de implantação e hospedagem.
