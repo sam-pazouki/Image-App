@@ -23,7 +23,7 @@ const App = () => {
           <AddAlbumForm onAddAlbum={addAlbum} />
         </header>
         <Routes>
-          <Route exact path="/" component={HomePage}/>
+          <Route path="/" element={<HomePage />} />
         </Routes>
       </div>
     </Router>
