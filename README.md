@@ -33,11 +33,17 @@ Esta aplicação é implantada no AWS S3, garantindo alta disponibilidade e dese
 
 ## Construído com:
 1.React – A estrutura web usada
+
 2.Axios – Para fazer solicitações HTTP
+
 3.API Imgur - Usada para upload e gerenciamento de imagens
+
 4.CSS – Para estilo e otimização
+
 5.npm - Gerenciamento de Dependências
+
 6.AWS S3 – plataforma de implantação
+
 7.Postman - Usado para testes de API
 
 ## Contribuindo
