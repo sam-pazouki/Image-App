@@ -40,10 +40,11 @@ Esta aplicação é implantada no AWS S3, garantindo alta disponibilidade e dese
 6.AWS S3 – plataforma de implantação
 7.Postman - Usado para testes de API
 
--Crie sua ramificação de recursos (git checkout -b feature/AmazingFeature)
--Confirme suas alterações (git commit -m 'Add some AmazingFeature')
--Push to the Branch (recurso de origem git push/AmazingFeature)
--Abra uma solicitação pull
+## Contribuindo
+1.Crie sua ramificação de recursos (git checkout -b feature/AmazingFeature)
+2.Confirme suas alterações (git commit -m 'Add some AmazingFeature')
+3.Push to the Branch (recurso de origem git push/AmazingFeature)
+4.Abra uma solicitação pull
 
 ## Licença
 -Distribuído sob a licença MIT. Consulte LICENÇA para obter mais informações.
