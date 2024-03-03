@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import AddAlbumForm from './components/AddAlbumForm';
-import HomePage from './components/HomePage'; 
 import './App.css';
 
 // The main App component where the state and functions related to albums are managed.
@@ -23,7 +22,6 @@ const App = () => {
           <AddAlbumForm onAddAlbum={addAlbum} />
         </header>
         <Routes>
-          <Route path="/" element={<HomePage />} />
         </Routes>
       </div>
     </Router>
