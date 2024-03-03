@@ -13,6 +13,9 @@ const ParentComponent = () => {
         const response = await fetch('https://api.imgur.com/3/account/me/albums', {
           headers: { Authorization: 'https://api.imgur.com/oauth2/token' },
         });
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
         const data = await response.json();
 
         // Update state with the fetched albums
