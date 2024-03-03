@@ -29,7 +29,7 @@ const Callback = () => {
         headers: {
           'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: `client_id=${process.env.d763bfd5cd14a3d}&client_secret=${process.env.a73ccc6c6a5e3f138e919f51b651d7ee019871a2}&code=${code}&grant_type=authorization_code&redirect_uri=${process.env.REACT_APP_REDIRECT_URI}`,
+        body: `client_id=${process.env.REACT_APP_IMGUR_CLIENT_ID}&client_secret=${process.env.REACT_APP_IMGUR_CLIENT_SECRET}&code=${code}&grant_type=authorization_code&redirect_uri=${process.env.REACT_APP_REDIRECT_URI}`,
       });
       const data = await response.json();
 
@@ -56,3 +56,4 @@ const Callback = () => {
 };
 
 export default Callback;
+
