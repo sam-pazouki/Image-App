@@ -30,6 +30,7 @@ npm test
 
 ## Implantação
 Esta aplicação é implantada no AWS S3, garantindo alta disponibilidade e desempenho. Siga a documentação da AWS para implantar aplicativos React no S3 para obter mais detalhes.
+http://imgurapplyncas.s3-website.us-east-2.amazonaws.com
 
 ## Construído com:
 1.React – A estrutura web usada
