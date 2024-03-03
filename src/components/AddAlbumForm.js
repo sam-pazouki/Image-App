@@ -1,48 +1,63 @@
 import React, { useState } from 'react';
 
-// Component for adding a new album
+// Defines a form component for adding a new album using the Imgur API.
 const AddAlbumForm = ({ onAddAlbum }) => {
-  // State for the album name input
+ 
   const [albumName, setAlbumName] = useState('');
-  // State for displaying success and error messages to the user
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-  // State for showing validation messages
   const [validationMessage, setValidationMessage] = useState('');
 
-  // Validates the album name based on predefined criteria
+  // Function to validate the album name input by the user.
   const validateAlbumName = (name) => {
     if (name.length < 3) {
       setValidationMessage('Album name must be at least 3 characters long.');
       return false;
     }
-    // Clears the validation message if criteria are met
     setValidationMessage('');
     return true;
   };
 
-  // Handles the form submission
+  // Asynchronous function to handle the form submission event.
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    // Validates the album name before proceeding
-    const isValid = validateAlbumName(albumName);
-    if (!isValid) {
-      return;
-    }
+    e.preventDefault(); 
+    const isValid = validateAlbumName(albumName); 
+    if (!isValid) return; 
+
     try {
-      // Attempts to create the album using the provided function and shows success message
-      await onAddAlbum(albumName);
-      setSuccessMessage('Album created successfully!');
-      setErrorMessage('');
-      setAlbumName('');
+      // Defines the URL and headers for the Imgur API request.
+      const url = 'https://api.imgur.com/3/album';
+      const headers = {
+        'Authorization': 'd763bfd5cd14a3d', 
+        'Content-Type': 'application/json'
+      };
+
+      // Executes the POST request to the Imgur API to create a new album.
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify({ title: albumName }) 
+      });
+
+      // Throws an error if the response from Imgur API is not OK.
+      if (!response.ok) {
+        const errorData = await response.json(); 
+        throw new Error(errorData.data.error); 
+      }
+
+      // Parses the successful response and updates the UI accordingly.
+      const data = await response.json();
+      await onAddAlbum(data.data); 
+      setSuccessMessage('Album created successfully!'); 
+      setAlbumName(''); 
     } catch (error) {
-      // Catches and displays any errors encountered during album creation
-      setErrorMessage('Failed to create album. Please try again.');
-      setSuccessMessage('');
+      setErrorMessage(error.message || 'Failed to create album. Please try again.'); 
+    } finally {
+      setErrorMessage(''); 
     }
   };
 
-  // Renders the album creation form and any applicable messages
+  // Renders the form and any success, error, or validation messages to the UI.
   return (
     <div>
       {successMessage && <div className="success-message">{successMessage}</div>}
