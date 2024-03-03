@@ -1,5 +1,8 @@
 ## interface do aplicativo
-[Screenshot 2024-03-01 105837](https://github.com/sam-pazouki/Lyncas-Desafio/assets/68926038/78eab1cf-20e5-420b-bbc9-bc1c006a4f59)
+
+![Imgur interface](https://github.com/sam-pazouki/Lyncas-Desafio/assets/68926038/6cdb0b65-9b57-4151-9c4b-4d16a7a902b1)
+
+
 
 # Gerenciador de imagens
 
