@@ -22,6 +22,7 @@ const App = () => {
           <AddAlbumForm onAddAlbum={addAlbum} />
         </header>
         <Routes>
+          <Route></Route>
         </Routes>
       </div>
     </Router>
