@@ -4,24 +4,23 @@ import AddAlbumForm from './AddAlbumForm';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
 
-test('renders learn react link', () => {
+test('renders AddAlbumForm', async () => {
   render(
     <MemoryRouter>
+      <AddAlbumForm onAddAlbum={() => {}} />
     </MemoryRouter>
   );
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
-
-test('renders AddAlbumForm', async () => {
-  render(<AddAlbumForm onAddAlbum={() => {}} />);
   expect(screen.getByPlaceholderText('Album Name')).toBeInTheDocument();
   expect(screen.getByText('Create Album')).toBeInTheDocument();
 });
 
 // Test for Input Change and Validation Message
 test('updates input value and displays validation message', async () => {
-  render(<AddAlbumForm onAddAlbum={() => {}} />);
+  render(
+    <MemoryRouter>
+      <AddAlbumForm onAddAlbum={() => {}} />
+    </MemoryRouter>
+  );
   const input = screen.getByPlaceholderText('Album Name');
   await userEvent.type(input, 'ab');
   expect(input.value).toBe('ab');
@@ -31,7 +30,11 @@ test('updates input value and displays validation message', async () => {
 // Test for Successful Form Submission
 test('handles form submission successfully', async () => {
   const mockOnAddAlbum = jest.fn();
-  render(<AddAlbumForm onAddAlbum={mockOnAddAlbum} />);
+  render(
+    <MemoryRouter>
+      <AddAlbumForm onAddAlbum={mockOnAddAlbum} />
+    </MemoryRouter>
+  );
   const input = screen.getByPlaceholderText('Album Name');
   await userEvent.type(input, 'New Album');
   await userEvent.click(screen.getByText('Create Album'));
