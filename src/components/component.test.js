@@ -2,6 +2,8 @@
 import { render, screen } from '@testing-library/react';
 import AddAlbumForm from './AddAlbumForm';
 import userEvent from '@testing-library/user-event';
+import { MemoryRouter } from 'react-router-dom';
+
 
 test('renders AddAlbumForm', async () => {
   render(<AddAlbumForm onAddAlbum={() => {}} />);
