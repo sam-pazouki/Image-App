@@ -4,6 +4,14 @@ import AddAlbumForm from './AddAlbumForm';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter } from 'react-router-dom';
 
+test('renders learn react link', () => {
+  render(
+    <MemoryRouter>
+    </MemoryRouter>
+  );
+  const linkElement = screen.getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
+});
 
 test('renders AddAlbumForm', async () => {
   render(<AddAlbumForm onAddAlbum={() => {}} />);
